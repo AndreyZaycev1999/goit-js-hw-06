@@ -1,14 +1,11 @@
-const list = document.querySelector("ul");
-
+const list = document.querySelector("#categories");
+const items = document.querySelectorAll(".item");
 console.log("Number of categories: " + list.children.length);
-const header = document.querySelectorAll("h2");
-const lists = document.querySelectorAll("ul");
-console.log('');
-console.log(header[0].textContent);
-console.log(lists[1].children.length);
-console.log('');
-console.log(header[1].textContent);
-console.log(lists[2].children.length);
-console.log('');
-console.log(header[2].textContent);
-console.log(lists[3].children.length);
+
+for (let index = 0; index < list.children.length; index++) {
+    const header = items[index].children[0].textContent;
+    const item = items[index].children[1].children.length;
+    console.log('');
+    console.log(header);
+    console.log(item);
+}
